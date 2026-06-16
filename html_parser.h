@@ -3,6 +3,10 @@
 
 #include <stdbool.h>
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 /*
  * Attribute key/value pair delivered to the tag callback.
  *
@@ -87,5 +91,9 @@ void html_scan_tags(const char *text, int len,
                     int flags,
                     const struct hash_table *allowed_tags,
                     const struct hash_table *allowed_attributes);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* HTML_PARSER_H */
